@@ -147,13 +147,13 @@
 -------------------------- */
 
 .jumbotron {
-    background: transparent;
+    background: transparent !important;
 }
 
 #contact-form {
     float: left;
     width: 50%;
-    color: #ebebeb;
+    background: #ebebeb !important;
 }
 #results_list {
     float: right;

@@ -146,9 +146,14 @@
 
 -------------------------- */
 
+.jumbotron {
+    background: transparent;
+}
+
 #contact-form {
     float: left;
     width: 50%;
+    color: #ebebeb;
 }
 #results_list {
     float: right;

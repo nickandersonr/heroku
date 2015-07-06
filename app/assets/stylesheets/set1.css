@@ -149,13 +149,34 @@
 .jumbotron {
     background: transparent !important;
 }
-
-#contact-form {
-    float: left;
-    width: 50%;
+#contact_form h2 {
+    color: #c5564a;
+    opacity: 1;
+}
+#contact_form {
     background: #ebebeb !important;
 }
 #results_list {
-    float: right;
-    width: 50%;
+
 }
+.input_holder {
+    max-width: 775px;
+    margin: 0 auto;
+}
+.city_input {
+    max-width: 227px;
+}
+.state_input {
+    max-width: 90px;
+}
+.message_input {
+    width: 100%;
+    max-width: 744px;
+}
+/*
+.input_holder textarea {
+    background: #c5564a;
+    width: 300px;
+    height: 300px;
+}
+*/

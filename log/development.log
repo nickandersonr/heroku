@@ -37813,3 +37813,109 @@ ActionController::RoutingError (No route matches [GET] "/assets/javascripts/clas
   Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
   Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-07 16:18:22 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (65.0ms)
+Completed 500 Internal Server Error in 124ms
+
+SyntaxError (/Users/nanderson/Dev/heroku/app/views/welcome/index.erb:127: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/nanderson/Dev/heroku/app/views/welcome/index.erb:129: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/welcome/index.erb:127: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/welcome/index.erb:129: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.1ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.6ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-07 16:18:51 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    14: 
+    15:     
+    16: 
+    17:         <%= form_for @calculate, :url => { :action => "create" } do |f| %>
+    18:             <div class="input_holder">
+    19:                 <span class="input input--minoru">
+    20:                     <input class="input__field input__field--yoko" type="text" name="firstname" id="input-16" />
+  app/views/welcome/index.erb:17:in `_app_views_welcome_index_erb___149148548950183272_70095846419960'
+
+
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.7ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-07 16:23:29 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    15:   
+    16:     
+    17: 
+    18:         <%= form_for @calculate, :url => { :action => "create" } do |f| %>
+    19:         <%= f.label :number %>
+    20:     <%= f.text_field :number %>
+    21:     <%= f.label :root %>
+  app/views/welcome/index.erb:18:in `_app_views_welcome_index_erb___149148548950183272_70095847773440'
+
+
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.3ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-07 16:24:17 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    13:         
+    14:         
+    15:         
+    16:         <%= form_for @calculate, :url => { :action => "create" } do |f| %>
+    17:   <%= f.label :number %>
+    18:     <%= f.text_field :number %>
+    19:     <%= f.label :root %>
+  app/views/welcome/index.erb:16:in `_app_views_welcome_index_erb___149148548950183272_70095879895400'
+
+
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-07 16:25:24 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    13:         
+    14:         
+    15:         
+    16:         <%= form_for @calculate, :url => { :action => "create" } do |f| %>
+    17:   <%= f.label :number %>
+    18:     <%= f.text_field :number %>
+    19:     <%= f.label :root %>
+  app/views/welcome/index.erb:16:in `_app_views_welcome_index_erb___1465246912880735225_70338229494360'
+
+
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (33.2ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/nanderson/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)

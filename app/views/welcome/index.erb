@@ -10,36 +10,47 @@
       </h5>
     <section id="contact_form" class="content bgcolor-5">
         <h2>HELLO! Please send me a nice message.</h2>
-        <form id="submission_form">
+        
+        
+        
+        <%= form_for @calculate, :url => { :action => "create" } do |f| %>
+  <%= f.label :number %>
+    <%= f.text_field :number %>
+    <%= f.label :root %>
+    <%= f.text_field :root %>
+    <%= submit_tag("Submit") %>
+<% end %>
+        
+        <form id="submission_form" action="add.php" method="post">
             <div class="input_holder">
                 <span class="input input--minoru">
-                    <input class="input__field input__field--yoko" type="text" id="input-16" />
+                    <input class="input__field input__field--yoko" type="text" name="firstname" id="input-16" />
                     <label class="input__label input__label--yoko" for="input-16">
                         <span class="input__label-content input__label-content--yoko">First Name</span>
                     </label>
                 </span>
                 <span class="input input--minoru">
-                    <input class="input__field input__field--yoko" type="text" id="input-17" />
+                    <input class="input__field input__field--yoko" type="text" name="lastname" id="input-17" />
                     <label class="input__label input__label--yoko" for="input-17">
                         <span class="input__label-content input__label-content--yoko">Last Name</span>
                     </label>
                 </span>
                 
                 <span class="input input--minoru">
-                    <input class="input__field input__field--yoko" type="text" id="input-18" />
+                    <input class="input__field input__field--yoko" type="text" name="email" id="input-18" />
                     <label class="input__label input__label--yoko" for="input-18">
                         <span class="input__label-content input__label-content--yoko">Email<sup>*</sup></span>
                     </label>
                 </span>
                 <span class="input input--minoru">
-                    <input class="input__field input__field--yoko" type="text" id="input-19" />
+                    <input class="input__field input__field--yoko" type="text" name="phone" id="input-19" />
                     <label class="input__label input__label--yoko" for="input-19">
                         <span class="input__label-content input__label-content--yoko">Phone<sup>*</sup></span>
                     </label>
                 </span>
                 
                 <span class="input input--minoru message_input">
-                    <input class="input__field input__field--yoko" type="text" id="input-21" />
+                    <input class="input__field input__field--yoko" type="text" name="message" id="input-21" />
                     <label class="input__label input__label--yoko" for="input-21">
                         <span class="input__label-content input__label-content--yoko">Message</span>
                     </label>

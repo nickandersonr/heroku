@@ -79,7 +79,13 @@
 .input__label--yoko {
 	position: relative;
 	width: 100%;
-	color: #b04b40;
+	color: #6baedd;
+	text-align: left;
+}
+.input__label--yoko--submit {
+	position: relative;
+	width: 100%;
+	color: #40b08a;
 	text-align: left;
 }
 
@@ -90,7 +96,22 @@
 	left: 0;
 	width: 100%;
 	height: 4em;
-	background: #c5564a;
+	background: #9bcbe2;
+	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+	transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.input__label--yoko--submit::before {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	width: 100%;
+	height: 4em;
+	background: #4ac5a7;
 	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
 	transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
 	-webkit-transform-origin: 50% 100%;
@@ -106,7 +127,20 @@
 	left: 0;
 	width: 100%;
 	height: 0.25em;
-	background: #ad473c;
+	background: #6baedd;
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.input__label--yoko--submit::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.25em;
+	background: #3cad79;
 	-webkit-transform-origin: 50% 0%;
 	transform-origin: 50% 0%;
 	-webkit-transition: -webkit-transform 0.3s;
@@ -147,14 +181,46 @@
 -------------------------- */
 
 .jumbotron {
-    background: transparent !important;
+    background: #9bcbe2 !important;
+    padding: 0 !important;
 }
+#header_text {
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+    
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+h5 {
+    margin-bottom: 60px;
+}
+h5 a {
+    color: #FFF;
+}
+
 #contact_form h2 {
-    color: #c5564a;
+    color: #6baedd;
     opacity: 1;
 }
 #contact_form {
-    background: #ebebeb !important;
+    background: #e6eced !important;
+    -webkit-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
+-moz-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
+box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
+      padding-bottom: 0;
 }
 #results_list {
 
@@ -171,12 +237,52 @@
 }
 .message_input {
     width: 100%;
-    max-width: 744px;
+    max-width: 738px;
 }
-/*
-.input_holder textarea {
-    background: #c5564a;
-    width: 300px;
-    height: 300px;
+
+
+    
+#results {
+    margin-top: 100px;
+    background: #e6eced;
 }
-*/
+#results h2 {
+    color: #6baedd;
+    opacity: 1;
+}
+.result_item {
+    background: #FFF;
+    -webkit-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
+-moz-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
+box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
+    padding: 40px;
+    text-align: left;
+    color: #CCC;
+    min-height: 144px;
+    margin-bottom: 20px;
+}
+.result_item h3 {
+    color: #454545;
+    border-bottom: 1px solid #CCC;
+    padding-top: 0;
+    margin-top: 0;
+}
+.result_item p {
+    float: left;
+    padding: 0 !important;
+    margin:  0 !important;
+    font-size: 14px !important;
+    color: #454545 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+

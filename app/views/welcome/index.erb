@@ -1,53 +1,89 @@
 <div class="jumbotron text-center">  
+    
   <div class="container">
+      <h1 id="header_text">Nick Anderson's Programming Test.</h1>
+      <h5>
+          ( <a href="http://nickanderson.rocks/" target="_blank">Website</a>  |
+          <a href="https://github.com/nickandersonr" target="_blank">Github</a> |
+          <a href="https://www.linkedin.com/in/nickandersonr" target="_blank">LinkedIn</a> |
+          <a href="mailto:nick.anderson.r@gmail.com" target="_blank">Mail</a> )
+      </h5>
     <section id="contact_form" class="content bgcolor-5">
         <h2>HELLO! Please send me a nice message.</h2>
-        <div class="input_holder">
-            <span class="input input--minoru">
-                <input class="input__field input__field--yoko" type="text" id="input-16" />
-                <label class="input__label input__label--yoko" for="input-16">
-                    <span class="input__label-content input__label-content--yoko">First Name</span>
-                </label>
-            </span>
-            <span class="input input--minoru">
-                <input class="input__field input__field--yoko" type="text" id="input-17" />
-                <label class="input__label input__label--yoko" for="input-17">
-                    <span class="input__label-content input__label-content--yoko">Last Name</span>
-                </label>
-            </span>
-            <span class="input input--minoru">
-                <input class="input__field input__field--yoko" type="text" id="input-18" />
-                <label class="input__label input__label--yoko" for="input-18">
-                    <span class="input__label-content input__label-content--yoko">Address</span>
-                </label>
-            </span>
-            <span class="input input--minoru city_input">
-                <input class="input__field input__field--yoko" type="text" id="input-19" />
-                <label class="input__label input__label--yoko" for="input-19">
-                    <span class="input__label-content input__label-content--yoko">City</span>
-                </label>
-            </span>
-            <span class="input input--minoru state_input">
-                <input class="input__field input__field--yoko" type="text" id="input-20" />
-                <label class="input__label input__label--yoko" for="input-20">
-                    <span class="input__label-content input__label-content--yoko">State</span>
-                </label>
-            </span>
-            <span class="input input--minoru message_input">
-                <input class="input__field input__field--yoko" type="text" id="input-21" />
-                <label class="input__label input__label--yoko" for="input-21">
-                    <span class="input__label-content input__label-content--yoko">Message</span>
-                </label>
-            </span>
-        </div>
+        <form id="submission_form">
+            <div class="input_holder">
+                <span class="input input--minoru">
+                    <input class="input__field input__field--yoko" type="text" id="input-16" />
+                    <label class="input__label input__label--yoko" for="input-16">
+                        <span class="input__label-content input__label-content--yoko">First Name</span>
+                    </label>
+                </span>
+                <span class="input input--minoru">
+                    <input class="input__field input__field--yoko" type="text" id="input-17" />
+                    <label class="input__label input__label--yoko" for="input-17">
+                        <span class="input__label-content input__label-content--yoko">Last Name</span>
+                    </label>
+                </span>
+                <!--
+                <span class="input input--minoru">
+                    <input class="input__field input__field--yoko" type="text" id="input-18" />
+                    <label class="input__label input__label--yoko" for="input-18">
+                        <span class="input__label-content input__label-content--yoko">Address</span>
+                    </label>
+                </span>
+                <span class="input input--minoru city_input">
+                    <input class="input__field input__field--yoko" type="text" id="input-19" />
+                    <label class="input__label input__label--yoko" for="input-19">
+                        <span class="input__label-content input__label-content--yoko">City</span>
+                    </label>
+                </span>
+                <span class="input input--minoru state_input">
+                    <input class="input__field input__field--yoko" type="text" id="input-20" />
+                    <label class="input__label input__label--yoko" for="input-20">
+                        <span class="input__label-content input__label-content--yoko">State</span>
+                    </label>
+                </span>
+                -->
+                <span class="input input--minoru message_input">
+                    <input class="input__field input__field--yoko" type="text" id="input-21" />
+                    <label class="input__label input__label--yoko" for="input-21">
+                        <span class="input__label-content input__label-content--yoko">Message</span>
+                    </label>
+                </span>
+                <span class="input input--minoru submit_container">
+                    <input class="input__field input__field--yoko" type="submit" value="Send" id="input-22" />
+                    <label class="input__label input__label--yoko input__label--yoko--submit" for="input-22">
+                        <span class="input__label-content input__label-content--yoko">&nbsp;</span>
+                    </label>
+                </span>
+            </div>
+        </form>
         
     </section> 
-    <section id="results" class="content">
-        <h2>This is what others have said.</h2>
-        <div id="results_list">
-        </div>
-    </section>
    </div>
+   <div id="results" class="container-fluid">
+       <section class="content">
+            <h2>This is what others have said:</h2>
+            <div id="results_list" class="container">
+                <div class="result_item">
+                    <h3><span>Jake</span>&nbsp;<span>Testman</span> says:</h3>
+                    <p>Nick is a pretty cool guy that doesn't afraid of anything.</p>
+                </div>
+                <div class="result_item">
+                    <h3><span>Jake</span>&nbsp;<span>Testman</span> says:</h3>
+                    <p>Nick is a pretty cool guy that doesn't afraid of anything.</p>
+                </div>
+                <div class="result_item">
+                    <h3><span>Jake</span>&nbsp;<span>Testman</span> says:</h3>
+                    <p>Nick is a pretty cool guy that doesn't afraid of anything.</p>
+                </div>
+                <div class="result_item">
+                    <h3><span>Jake</span>&nbsp;<span>Testman</span> says:</h3>
+                    <p>Nick is a pretty cool guy that doesn't afraid of anything.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
 <script src="../../assets/javascripts/classie.js"></script>
 		<script>

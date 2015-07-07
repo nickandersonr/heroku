@@ -260,17 +260,17 @@ box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
 .result_item {
     background: #FFF;
     -webkit-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
--moz-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
+    box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.05);
     padding: 40px;
     text-align: left;
     color: #CCC;
     min-height: 144px;
-      margin-bottom: 20px;
-  float: left;
-  max-width: 340px;
-  margin: 20px;
-  min-height: 230px;
+    margin-bottom: 20px;
+    float: left;
+    max-width: 340px;
+    margin: 20px;
+    min-height: 230px;
 }
 .result_item h3 {
     color: #262E36;

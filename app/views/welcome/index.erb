@@ -10,18 +10,10 @@
       </h5>
     <section id="contact_form" class="content bgcolor-5">
         <h2>HELLO! Please send me a nice message.</h2>
+
         
         
-        
-        <%= form_for @calculate, :url => { :action => "create" } do |f| %>
-  <%= f.label :number %>
-    <%= f.text_field :number %>
-    <%= f.label :root %>
-    <%= f.text_field :root %>
-    <%= submit_tag("Submit") %>
-<% end %>
-        
-        <form id="submission_form" action="add.php" method="post">
+        <form id="submission_form" method="post">
             <div class="input_holder">
                 <span class="input input--minoru">
                     <input class="input__field input__field--yoko" type="text" name="firstname" id="input-16" />
@@ -89,7 +81,61 @@
             </div>
         </section>
     </div>
+    <div id="explination" class="container-fluid">
+        <div class="container">
+           <section class="content">
+                <h2>So clearly this doesn't work.</h2>
+                <p>
+                    I have tried very hard, but have failed to satisfy every part of your programming test. However,
+                    I wanted to give you a list of what I DID accomplish, since there are many factors involved in 
+                    the success of this particular test - that might give you a better understanding of my exact skillset.
+                    Its possible that the pieces I've missed are actually easy to learn and just require a bit more experience.
+                </p>
+               <ol>
+                    <li>Set up a <a href="https://thawing-garden-1191.herokuapp.com/" target="_blank">test instance of Heroku</a> with their basic example</li>
+                   <li>Set up <a href="https://github.com/nickandersonr/heroku" target="_blank">my own repo</a> for my project</li>
+                   <li>Installed postgres and the dependant gems for my project</li>
+                   <li>Set the $PATH so that my project could access a database</li>
+                   <li>Got Heroku running locally</li>
+                   <li>Got local changes deploying to this page</li>
+                   <li>Learned Ruby syntax for forms, mostly with the help of Docs and StackOverflow</li>
+                   <li>Created a new Ruby class to collect form information</li>
+                   <li>Used "require" to call in new class, controller</li>
+                   <li>Ran out of time while trying to create a new table through PostgreSQL</li>
+                   <li>Decided to use remaining time to make this list</li>
+               </ol>
+               <p>
+                    This was my first time really digging into architecting a solution with Ruby - while I've worked in Ruby systems before,
+                   I've never been the one rolling out the basic structure and setting things up, so a lot of this was uncharted territory for me.
+                   That being said, I was able to get rather far just by searching out information and trying things. For that reason I wouldn't say 
+                   that anything in this test is inately out of my skillset, just out of my comfort zone.
+               </p>
+               <p>
+                    Thanks for your time reviewing this - Let me know if I can provide anything else!
+               </p>
+               <p>
+                    - Nick Anderson
+                   <br>
+                   nick.anderson.r@gmail.com
+                   <br>
+                   <h5>
+                      ( <a href="http://nickanderson.rocks/" target="_blank">Website</a>  |
+                      <a href="https://github.com/nickandersonr" target="_blank">Github</a> |
+                      <a href="https://www.linkedin.com/in/nickandersonr" target="_blank">LinkedIn</a> |
+                      <a href="mailto:nick.anderson.r@gmail.com" target="_blank">Mail</a> )
+                  </h5>
+               </p>
+            </section>
+        </div>
+    </div>
 </div>
+<%#= form_for(@calculate) do |form| %>
+          <%#= form.label :number %>
+          <%#= form.text_field :number %>
+          <%#= form.label :root %>
+          <%#= form.text_field :root %>c
+          <%#= form.submit "Submit" %>
+        <%# end %>
 <script src="../../assets/javascripts/classie.js"></script>
 		<script>
 			(function() {

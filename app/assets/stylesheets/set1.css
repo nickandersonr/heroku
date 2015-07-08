@@ -299,10 +299,44 @@ box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
         width: 100%;
         min-height: inherit;
 	}
+    .message_input {
+      max-width: 350px;
+    }
 }
 
-
-
+#explination {
+    background: #D94776;
+    color: #FFF;
+}
+#explination .container {
+    max-width: 600px;
+}
+#explination h2 {
+    color: #FFF;
+    opacity: 1;
+}
+#explination a {
+    color: #262E36;
+}
+#explination p,
+#explination ol li {
+    text-align: left;
+    line-height: 1.5;
+}
+#explination p {
+    padding: 0;
+    font-size: 16px;
+}
+#explination ol {
+    margin: 60px 0;
+}
+#explination ol li {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#explination h5 a {
+    color: #FFF;
+}
 
 
 

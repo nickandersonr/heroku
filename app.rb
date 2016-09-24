@@ -1,9 +1,35 @@
 require 'sinatra'
+#you need to require json:
+require 'json'
 
-#syntax was wrong - also, the index should be an .erb file, not .html:
+#setting haml, to use Sinatra's preferred templating standard
+set :haml, format: :html5
+
+#syntax was wrong - also, we'll be using haml, not .html:
 get '/' do
-  erb :index
+  haml :index
 end
+
+#syntax was wrong here was well, a different call is required for this setup
+get '/favorites' do
+  content_type :json
+  begin
+    File.read('data.json')
+  end
+end
+
+#instead of "getting" our json, content, we'll be "posting" it
+post '/favorites' do
+  content_type :json
+  params = JSON.parse(request.body.read)
+  data =
+    begin
+      JSON.parse(File.read('data.json'))
+    end
+  data.to_json
+end
+
+
 
 =begin
 
@@ -14,11 +40,11 @@ get '/'
 end
 
 get 'favorites' do
-  response.header['Content-Type'] = 'application/json'
+  response.header['Content-Type'] = 'application/json' <--- incorrect syntax
   File.read('data.json')
 end
 
-get '/favorites' do
+get '/favorites' do  <--- incorrect syntax
   file = JSON.parse(File.read('data.json'))
   unless params[:name] && params[:oid]
     return 'Invalid Request'

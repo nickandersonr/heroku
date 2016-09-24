@@ -1,0 +1,46 @@
+!!!
+%html
+    %head
+        %meta{:name=>"viewport", :content=>"width=device-width"}
+        %link{ rel: "stylesheet", href: "css/bootstrap.css" }
+        %link{ rel: "stylesheet", href: "css/main.css" }
+   
+    %body.jumbotron.text-center
+        %div.container
+            %h1#header_text Movie Search!
+            %h3 By Nick Anderson
+            %h5
+                %a{:href=>"http://nickanderson.rocks/", :target=>"_blank"} Website
+                %a{:href=>"https://github.com/nickandersonr", :target=>"_blank"} Github
+                %a{:href=>"https://www.linkedin.com/in/nickandersonr", :target=>"_blank"} LinkedIn
+                %a{:href=>"mailto:nick.anderson.r@gmail.com", :target=>"_blank"} Mail
+            
+            %section#form
+                %form.well.form-search#submission_form{:onsubmit=>"return false"}
+
+                    %div.input_holder.row
+                        %div.input.input--minoru.col-md-10
+                            %input.input__field.input__field--yoko#input-16{:type=>"text", :name=>"t"}
+                            %label.input__label.input__label--yoko{:for=>"input-16"}    
+                                %span.input__label-content.input__label-content--yoko Title 
+                    
+
+                        %div.input.input--minoru.submit_container.col-md-2
+                            %input.input__field#input-22{:type=>"submit", :value=>"Search"}
+                            %label.input__label{:for=>"input-22"}
+                                %span.input__label-content.input__label-content--yoko &nbsp;
+
+                %div.container#results
+                    %section.content
+                        %h2 Results
+                        %table.table.table-striped
+                            %tr.first 
+                                %td Name
+                                %td Year
+                            %tr
+                                %td &nbsp;
+                                %td &nbsp;
+
+
+
+%script{ src: '/js/main.js', type: 'text/javascript' }

@@ -1,1 +1,42 @@
 <h1>INDEX.HTML!</h1>
+<form class="well form-search" id="search-by-title-form" onsubmit="return false;">
+    <fieldset>
+        <legend>By Title</legend>
+    </fieldset>
+    <div>
+        <label class="control-label" for="t">Title:</label>
+        <input type="text" id="t" name="t" class="input-small">
+        &nbsp;&nbsp;
+        <label class="control-label" for="y">Year:</label>
+        <input type="text" id="y" name="y" class="input-small" style="width: 100px;">
+        &nbsp;&nbsp;
+        <label class="control-label">Plot:</label>
+        <select name="plot" style="width: 100px;">
+            <option value="short" selected="">Short</option>
+            <option value="full">Full</option>
+        </select>
+        &nbsp;&nbsp;
+        <label class="control-label">Response:</label>
+        <select name="r" style="width: 100px;">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+        </select>
+        &nbsp;&nbsp;
+        <button id="search-by-title-button" type="button" class="btn-sm btn-primary">Search</button>
+        <button id="search-by-title-reset" type="reset" class="btn-sm">Reset</button>
+    </div>
+    <div class="hide" id="search-by-title-request" style="display: none;">
+        <br>
+        <p>Request:</p>
+        <pre class="alert alert-box"><a href="javascript:;" target="_blank"></a></pre>
+    </div>
+    <div id="search-by-title-progress" class="hide progress progress-info progress-striped active" style="display: none;">
+        <div class="progress-bar" style="width: 100%;">
+        </div>
+    </div>
+    <div class="hide" id="search-by-title-response" style="display: none;">
+        <p>Response:</p>
+        <pre class="alert alert-success" style="margin-bottom: 0px; white-space: normal;"></pre>
+    </div>
+</form>
+<script type="text/javascript" src="../public/js/main.js"/>

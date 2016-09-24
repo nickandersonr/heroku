@@ -39,7 +39,7 @@ get '/'
   File.read('index.html') <--- incorrect syntax
 end
 
-get 'favorites' do
+get 'favorites' do <--- missing a slash before 'favorites'
   response.header['Content-Type'] = 'application/json' <--- incorrect syntax
   File.read('data.json')
 end

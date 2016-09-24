@@ -1,13 +1,16 @@
 require 'sinatra'
 
+#syntax was wrong - also, the index should be an .erb file, not .html:
 get '/' do
-  'Hello world!'
+  erb :index
 end
 
 =begin
 
+### Your code, with annotations ###
+
 get '/'
-  File.read('index.html')
+  File.read('index.html') <--- incorrect syntax
 end
 
 get 'favorites' do

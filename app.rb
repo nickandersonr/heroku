@@ -1,7 +1,7 @@
 require 'sinatra'
 
-get '/'
-  File.read('index.html')
+get '/' do
+  'hello world!'
 end
 
 get 'favorites' do

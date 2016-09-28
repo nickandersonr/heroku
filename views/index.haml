@@ -7,40 +7,62 @@
    
     %body.jumbotron.text-center
         %div.container
-            %h1#header_text Movie Search!
-            %h3 By Nick Anderson
-            %h5
-                %a{:href=>"http://nickanderson.rocks/", :target=>"_blank"} Website
-                %a{:href=>"https://github.com/nickandersonr", :target=>"_blank"} Github
-                %a{:href=>"https://www.linkedin.com/in/nickandersonr", :target=>"_blank"} LinkedIn
-                %a{:href=>"mailto:nick.anderson.r@gmail.com", :target=>"_blank"} Mail
-            
-            %section#form
-                %form.well.form-search#submission_form{:onsubmit=>"return false"}
+            %div.row
+                %div.col-md-8
+                    %h1#header_text Movie Search!
+                %div.col-md-4
+                    %div.author_info
+                        %h3 By Nick Anderson
+                        %h5
+                            %a{:href=>"http://nickanderson.rocks/", :target=>"_blank"} Website
+                            %a{:href=>"https://github.com/nickandersonr", :target=>"_blank"} Github
+                            %a{:href=>"https://www.linkedin.com/in/nickandersonr", :target=>"_blank"} LinkedIn
+                            %a{:href=>"mailto:nick.anderson.r@gmail.com", :target=>"_blank"} Mail
 
-                    %div.input_holder.row
-                        %div.input.input--minoru.col-md-10
-                            %input.input__field.input__field--yoko#title{:type=>"text", :name=>"t"}
+            %section.row#form
+                %form.well#submission_form{:onsubmit=>"return false"}
+
+                    %div.input_holder.row.form-group
+                        %div.input.input--minoru.col-md-8.col-xs-12
+                            %input.form-control.input__field.input__field--yoko#search_value{ :type=> "text", :placeholder=> "Search a Title" }
                             %label.input__label.input__label--yoko{:for=>"input-16"}    
                                 %span.input__label-content.input__label-content--yoko Title 
+                                
                     
 
-                        %div.input.input--minoru.submit_container.col-md-2
-                            %input.input__field#search{:type=>"submit", :value=>"Search"}
+                        %div.input.input--minoru.submit_container.col-md-4.col-xs-12
+                            %input.btn.input__field#search{ :type=> "button", :value=> "search!" }
                             %label.input__label{:for=>"input-22"}
                                 %span.input__label-content.input__label-content--yoko &nbsp;
+                                
 
                 %div.container#results
-                    %section.content
+                    %section.content#results_container.col-md-8
                         %h2 Results
                         %table.table.table-striped
-                            %tr.first 
-                                %td Name
-                                %td Year
-                            %tr
-                                %td &nbsp;
-                                %td &nbsp;
+                            %thead
+                                %tr.first 
+                                    %th Title
+                                    %th Year
+                            %tbody
+                                %tr
+                                    
+                    %section.content.col-md-4
+                        %h2 Details
+                        %aside.panel.hidden
+                            .panel-heading
+                            .panel-body
 
+            %script{ src: '/js/jquery-3.1.1.min.js', type: 'text/javascript' }
+            %script{ src: '/js/main.js', type: 'text/javascript' }
+            :javascript
+                $(document).ready(function () {
+                window.setInterval(function(){
+                     var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=classic+film+scene&api_key=dc6zaTOxFJmzC");
+                        var random = Math.ceil(Math.random() * 21);
+                        xhr.done(function(data) { 
+                          $('html').css("background-image", 'url(https://media.giphy.com/media/' + data.data[random].id + '/giphy.gif)'); 
+                        });
+                    }, 5000);
+                });
 
-
-%script{ src: '/js/main.js', type: 'text/javascript' }

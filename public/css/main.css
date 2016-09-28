@@ -9,6 +9,11 @@
 .list-group {
     margin-bottom: 0;
 }
+.panel-default > .panel-heading {
+    color: #FFF;
+    background-color: #343434;
+    border-color: #ddd;
+}
 
 /*--- Basics ---*/
 

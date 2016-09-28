@@ -80,6 +80,9 @@ h3 {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
+.input__field#search_value {
+    padding: 0 10px;
+}
 
 .input__field:focus {
 	outline: none;

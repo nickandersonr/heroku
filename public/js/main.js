@@ -69,7 +69,7 @@ function detail_action() {
 function detail_result(json_parse) {
  
   document.getElementsByClassName('panel')[0].className = "panel panel-default show"
-  document.getElementsByClassName('panel-heading')[0].innerHTML = '&nbsp;&nbsp;<strong>' + json_parse.Title + '</strong>&nbsp;&nbsp;(' + json_parse.Released + ')'
+  document.getElementsByClassName('panel-heading')[0].innerHTML = '<strong>' + json_parse.Title + '</strong><br/>(' + json_parse.Released + ')'
   document.getElementsByClassName('panel-body')[0].innerHTML    = '<div class="detail_holder">' +
       '<div><strong>Genre:</strong>&nbsp;&nbsp;' + json_parse.Genre + '</div>' +
       '<div><strong>Starring:</strong>&nbsp;&nbsp;' + json_parse.Actors + '</div>' +

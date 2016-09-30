@@ -103,29 +103,35 @@ function detail_result(json_parse) {
  
 }
 
+
 /*-- function for handling how a movie becomes a 'favorite' --*/
 function btn_favorite() {
-  var xhr = new XMLHttpRequest();
-  var uri = encodeURI('/favorites')
+ if(this.classList.value.indexOf("starred") >= 0) {
+   return false;
+ } else {
+   var xhr = new XMLHttpRequest();
+   var uri = encodeURI('/favorites')
 
-  xhr.open('POST', uri, true);
-  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+   xhr.open('POST', uri, true);
+   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-  xhr.onreadystatechange = function() {
-      
-    if (xhr.readyState == 4) {
-      var json_parse = JSON.parse(xhr.response)
-      reload_favorites_works(json_parse)
-    }
-      
-  }
+   xhr.onreadystatechange = function() {
+     
+     if (xhr.readyState == 4) {
+       var json_parse = JSON.parse(xhr.response)
+       reload_favorites_works(json_parse)
+     }
+     
+   }
 
-  xhr.send(JSON.stringify({
-    name: this.attributes['data-name'].value,
-    oid: this.attributes['data-oid'].value
-  }));
-
+   xhr.send(JSON.stringify({
+     name: this.attributes['data-name'].value,
+     oid: this.attributes['data-oid'].value
+   }));
+ }
+ 
 }
+
 
 
 

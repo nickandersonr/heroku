@@ -1,3 +1,6 @@
+document.getElementById('header_text').addEventListener('click', favorite_animate, false);
+
+
 /*-- Tells the page to 'listen' to the search button and favorite button --*/
 document.getElementById('search').addEventListener('click', search, false);
 document.getElementById('reload_favorites').addEventListener('click', reload_favorites, false);
@@ -105,6 +108,11 @@ function btn_favorite() {
     name: this.attributes['data-name'].value,
     oid: this.attributes['data-oid'].value
   }));
+}
+
+/*-- Favorite Animation --*/
+function favorite_animate() {
+    this.className = "star starred"
 }
 
 

@@ -8,6 +8,14 @@
 }
 .list-group {
     margin-bottom: 0;
+    list-style: none;
+}
+.panel {
+    background: transparent;
+    border: 0;
+}
+.panel-body {
+    background: #FFF;
 }
 .panel-default > .panel-heading {
     color: #FFF;
@@ -58,12 +66,16 @@ h3 {
 .input.col-md-2 {
     width: 20%;
 }
-#search {
+#search,
+#reload_favorites {
     background: #343434;
     color: #FFF;
     font-weight: 800;
     text-transform: uppercase;
     font-size: 18px;
+}
+#reload_favorites {
+    margin-bottom: 20px;
 }
 
 .input__field {
@@ -364,6 +376,11 @@ tr.first {
 
 .detail_holder div {
     margin-bottom: 20px;
+}
+
+
+#favorites h1 {
+      font-weight: normal;
 }
 
 @media (max-width: 767px) {

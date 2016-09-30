@@ -1,7 +1,7 @@
 !!!
 %html
     %head
-        %meta{:name=>"viewport", :content=>"width=device-width"}
+        %meta{ name: "viewport", content: "width=device-width"}
         %link{ rel: "stylesheet", href: "css/bootstrap.css" }
         %link{ rel: "stylesheet", href: "css/main.css" }
    
@@ -14,25 +14,25 @@
                     %div.author_info
                         %h3 By Nick Anderson
                         %h5
-                            %a{:href=>"http://nickanderson.rocks/", :target=>"_blank"} Website
-                            %a{:href=>"https://github.com/nickandersonr", :target=>"_blank"} Github
-                            %a{:href=>"https://www.linkedin.com/in/nickandersonr", :target=>"_blank"} LinkedIn
-                            %a{:href=>"mailto:nick.anderson.r@gmail.com", :target=>"_blank"} Mail
+                            %a{href: "http://nickanderson.rocks/", target: "_blank"} Website
+                            %a{href: "https://github.com/nickandersonr", target: "_blank"} Github
+                            %a{href: "https://www.linkedin.com/in/nickandersonr", target: "_blank"} LinkedIn
+                            %a{href: "mailto:nick.anderson.r@gmail.com", target: "_blank"} Mail
 
             %section.row#form
-                %form.well#submission_form{:onsubmit=>"return false"}
+                %form.well#submission_form{onsubmit: "return false"}
 
                     %div.input_holder.row.form-group
                         %div.input.input--minoru.col-md-8.col-xs-12
-                            %input.form-control.input__field.input__field--yoko#search_value{ :type=> "text", :placeholder=> "Search a Title" }
-                            %label.input__label.input__label--yoko{:for=>"input-16"}    
+                            %input.form-control.input__field.input__field--yoko#search_value{type: "text", placeholder: "Search a Title" }
+                            %label.input__label.input__label--yoko{for: "input-16"}    
                                 %span.input__label-content.input__label-content--yoko Title 
                                 
                     
 
                         %div.input.input--minoru.submit_container.col-md-4.col-xs-12
-                            %input.btn.input__field#search{ :type=> "button", :value=> "search!" }
-                            %label.input__label{:for=>"input-22"}
+                            %input.btn.input__field#search{type: "button", value: "search!" }
+                            %label.input__label{for: "input-22"}
                                 %span.input__label-content.input__label-content--yoko &nbsp;
                                 
 
@@ -42,16 +42,31 @@
                         %table.table.table-striped
                             %thead
                                 %tr.first 
+                                    %th Favorite
                                     %th Title
                                     %th Year
                             %tbody
                                 %tr
                                     
                     %section.content.col-md-4
-                        %h2 Details
+                            
                         %aside.panel.hidden
+                            %h2 Details
                             .panel-heading
                             .panel-body
+
+                        %div#favorites.panel.hidden
+                            %h2 Your Favorites:
+                            .panel-body
+                                %ul#favorite_list.list-group
+        
+                                    
+                                        
+                        %form.navbar-form.col-sm-12
+                        %input.btn.input__field#reload_favorites{ type: "button", value: "My Favorites" }
+
+                            
+            
 
             %script{ src: '/js/jquery-3.1.1.min.js', type: 'text/javascript' }
             %script{ src: '/js/classie.js', type: 'text/javascript' }

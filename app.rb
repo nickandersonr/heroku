@@ -22,13 +22,17 @@ end
 post '/favorites' do
   content_type :json
   params = JSON.parse(request.body.read)
+    
   data =
     begin
-      JSON.parse(File.read('data.json'))
+     JSON.parse(File.read('data.json'))
+        rescue CheckLogFileForSpecificError = > e
+            puts "ERROR: #{e}"
     end
+  data << { name: params['name'], oid: params['oid'] }
+  File.write('data.json', JSON.pretty_generate(data))
   data.to_json
 end
-
 
 
 =begin

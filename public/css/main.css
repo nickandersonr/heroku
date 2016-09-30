@@ -383,6 +383,14 @@ tr.first {
       font-weight: normal;
 }
 
+.btn_favorite .star {
+    fill: #FFF;
+}
+.btn_favorite.starred .star {
+    fill: #FFCC00;
+    transition: all 0.5s ease;
+}
+
 @media (max-width: 767px) {
     .input.col-md-10,
     .input.col-md-2 {

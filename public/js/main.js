@@ -1,6 +1,3 @@
-document.getElementById('header_text').addEventListener('click', favorite_animate, false);
-
-
 /*-- Tells the page to 'listen' to the search button and favorite button --*/
 document.getElementById('search').addEventListener('click', search, false);
 document.getElementById('reload_favorites').addEventListener('click', reload_favorites, false);
@@ -45,6 +42,14 @@ function search_works(json_parse) {
             '<td>' + json_parse.Search[i].Year + '</td>' +
         '</tr>'
   }
+    
+  /*-- Just for fun, an animation for the favorite buttons --*/
+  document.getElementsByClassName("btn_favorite")[0].addEventListener('click', favorite_animate, false);
+    
+  /*-- Favorite Animation --*/
+  function favorite_animate() {
+     this.className = "btn_favorite starred";
+  }
 
   /*-- sets up link to get details --*/
   for (var i = 0, details_results = document.getElementsByClassName('btn_details'); i < details_results.length; i++) {
@@ -85,6 +90,9 @@ function detail_result(json_parse) {
      '<div><strong>Starring:</strong>&nbsp;&nbsp;' + json_parse.Actors + '</div>' +
      '<div>' + json_parse.Plot + '</div>' +
    '</div>'
+ 
+ 
+ 
 }
 
 /*-- function for handling how a movie becomes a 'favorite' --*/
@@ -110,10 +118,7 @@ function btn_favorite() {
   }));
 }
 
-/*-- Favorite Animation --*/
-function favorite_animate() {
-    this.className = "star starred"
-}
+
 
 
 /*-- Reload list of favorites with new additions --*/

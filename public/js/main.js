@@ -42,14 +42,6 @@ function search_works(json_parse) {
             '<td>' + json_parse.Search[i].Year + '</td>' +
         '</tr>'
   }
-    
-  /*-- Just for fun, an animation for the favorite buttons --*/
-  document.getElementsByClassName("btn_favorite")[0].addEventListener('click', favorite_animate, false);
-    
-  /*-- Favorite Animation --*/
-  function favorite_animate() {
-     this.className = "btn_favorite starred";
-  }
 
   /*-- sets up link to get details --*/
   for (var i = 0, details_results = document.getElementsByClassName('btn_details'); i < details_results.length; i++) {
@@ -59,6 +51,15 @@ function search_works(json_parse) {
   /*-- and then favorites --*/
   for (var i = 0, details_results = document.getElementsByClassName('btn_favorite'); i < details_results.length; i++) {
     details_results[i].addEventListener('click', btn_favorite, false);
+  }
+    
+    
+  /*-- Just for fun, an animation for the favorite buttons --*/
+  document.getElementsByClassName("btn_favorite")[0].addEventListener('click', favorite_animate, false);
+    
+  /*-- Favorite Animation --*/
+  function favorite_animate() {
+     this.className = "btn_favorite starred";
   }
     
 }
@@ -116,6 +117,7 @@ function btn_favorite() {
     name: this.attributes['data-name'].value,
     oid: this.attributes['data-oid'].value
   }));
+
 }
 
 

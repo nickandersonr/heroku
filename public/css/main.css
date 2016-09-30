@@ -1,4 +1,27 @@
-/*--- Overrides ---*/
+/* ---------------------------------------------- /*
+ * 
+
+ $$$$$$\  $$\             $$\                                   $$\     $$\                                     
+$$  __$$\ $$ |            $$ |                                  $$ |    $$ |                                    
+$$ /  $$ |$$$$$$$\        $$$$$$$\   $$$$$$\  $$\   $$\       $$$$$$\   $$$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\  
+$$ |  $$ |$$  __$$\       $$  __$$\ $$  __$$\ $$ |  $$ |      \_$$  _|  $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ 
+$$ |  $$ |$$ |  $$ |      $$ |  $$ |$$$$$$$$ |$$ |  $$ |        $$ |    $$ |  $$ |$$$$$$$$ |$$ |  \__|$$$$$$$$ |
+$$ |  $$ |$$ |  $$ |      $$ |  $$ |$$   ____|$$ |  $$ |        $$ |$$\ $$ |  $$ |$$   ____|$$ |      $$   ____|
+ $$$$$$  |$$ |  $$ |      $$ |  $$ |\$$$$$$$\ \$$$$$$$ |        \$$$$  |$$ |  $$ |\$$$$$$$\ $$ |      \$$$$$$$\ 
+ \______/ \__|  \__|      \__|  \__| \_______| \____$$ |         \____/ \__|  \__| \_______|\__|       \_______|
+                                              $$\   $$ |                                                        
+                                              \$$$$$$  |                                                        
+                                               \______/                                                         
+
+    Thanks for looking at my CSS.
+
+    - Nick Anderson
+
+
+
+/* ---------------------------------------------- /*
+ * Bootstrap Overrides
+/* ---------------------------------------------- */
 
 .well {
     margin-bottom: 0;
@@ -6,16 +29,15 @@
     border-radius: 0;
     border: 0;
 }
+
 .list-group {
     margin-bottom: 0;
     list-style: none;
 }
+
 .panel {
     background: transparent;
     border: 0;
-}
-.panel-body {
-    background: #FFF;
 }
 .panel-default > .panel-heading {
     color: #FFF;
@@ -25,6 +47,10 @@
 .panel-heading strong {
     font-size: 22px;
 }
+.panel-body {
+    background: #FFF;
+}
+
 .form-control {
     box-shadow: none;
 }
@@ -38,7 +64,10 @@
             box-shadow: none;
 }
 
-/*--- Basics ---*/
+
+/* ---------------------------------------------- /*
+ * Core Elements
+/* ---------------------------------------------- */
 
 html {  
     background-repeat: no-repeat; 
@@ -50,7 +79,28 @@ html {
 h3 {
     color: #FFF;
     font-weight: 700;
+    margin-top: 10px;
 }
+h5 a {
+    color: #FFF;
+    margin: 0 4px;
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------- /*
+ * Utility Classes
+/* ---------------------------------------------- */
+
+.grey_out {
+    color: #a2a2a2;
+}
+
+
+/* ---------------------------------------------- /*
+ * Fancy Input Styles
+/* ---------------------------------------------- */
+
 .input {
     display: block;
 	position: relative;
@@ -60,24 +110,6 @@ h3 {
 	vertical-align: top;
     float: left;
 }
-.input.col-md-10 {
-    width: 70%;
-}
-.input.col-md-2 {
-    width: 20%;
-}
-#search,
-#reload_favorites {
-    background: #343434;
-    color: #FFF;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 18px;
-}
-#reload_favorites {
-    margin-bottom: 20px;
-}
-
 .input__field {
 	position: relative;
 	display: block;
@@ -95,11 +127,9 @@ h3 {
 .input__field#search_value {
     padding: 0 10px;
 }
-
 .input__field:focus {
 	outline: none;
 }
-
 .input__label {
 	display: inline-block;
 	float: right;
@@ -117,26 +147,12 @@ h3 {
 	-ms-user-select: none;
 	user-select: none;
 }
-
 .input__label-content {
 	position: relative;
 	display: block;
 	padding: 1.6em 0;
 	width: 100%;
 }
-
-.graphic {
-	position: absolute;
-	top: 0;
-	left: 0;
-	fill: none;
-}
-
-.icon {
-	color: #ddd;
-	font-size: 150%;
-}
-
 .input--minoru.col-md-8.col-xs-12 {
     position: relative;
     top: 5px;
@@ -159,7 +175,6 @@ h3 {
 .input__field--yoko:-ms-input-placeholde {
    color: red;
 }
-
 .input__label--yoko {
 	position: relative;
 	width: 100%;
@@ -172,7 +187,6 @@ h3 {
 	color: #40b08a;
 	text-align: left;
 }
-
 .input__label--yoko::before {
 	content: '';
 	position: absolute;
@@ -203,7 +217,6 @@ h3 {
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 }
-
 .input__label--yoko::after {
 	content: '';
 	position: absolute;
@@ -230,29 +243,24 @@ h3 {
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 }
-
 .input__label-content--yoko {
 	padding: 0.75em 0;
 }
-
 .input__field--yoko:focus,
 .input--filled .input__field--yoko {
 	opacity: 1;
 	-webkit-transition-delay: 0.3s;
 	transition-delay: 0.3s;
 }
-
 .input__field--yoko:focus + .input__label--yoko::before,
 .input--filled .input__label--yoko::before {
 	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
 	transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
 }
-
 .input__field--yoko:focus + .input__label--yoko,
 .input--filled .input__label--yoko {
 	pointer-events: none;
 }
-
 .input__field--yoko:focus + .input__label--yoko::after,
 .input--filled .input__label--yoko::after {
 	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
@@ -260,8 +268,9 @@ h3 {
 }
 
 
-/* ------------ Layout
--------------------------- */
+/* ---------------------------------------------- /*
+ * Layout
+/* ---------------------------------------------- */
 
 .jumbotron {
     background: transparent !important;
@@ -300,19 +309,7 @@ h3 {
     border-radius: 10px;
     text-align: right;
 }
-h3 {
-    margin-top: 10px;
-}
-h5 a {
-    color: #FFF;
-    margin: 0 4px;
-    text-decoration: underline;
-}
 
-#form h2 {
-    color: #343434;
-    opacity: 1;
-}
 #form {
     background: rgba(255, 255, 255, .5);
     -webkit-box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
@@ -320,15 +317,41 @@ h5 a {
 box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
       padding-bottom: 0;
 }
+#form h2 {
+    color: #343434;
+    opacity: 1;
+}
+
+
+/* ---------------------------------------------- /*
+ * Search Form
+/* ---------------------------------------------- */
 
 .input_holder {
     /* max-width: 775px; */
     margin: 0 auto;
 }
-
 .submit_container .input__label {
     display: none;
 }
+
+
+#search,
+#reload_favorites {
+    background: #343434;
+    color: #FFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+#reload_favorites {
+    margin-bottom: 20px;
+}
+
+
+/* ---------------------------------------------- /*
+ * Results Table
+/* ---------------------------------------------- */
 
 #results {
     margin-top: 0px;
@@ -363,6 +386,7 @@ box-shadow: inset 0px 0px 21px -1px rgba(0,0,0,0.11);
     font-size: 14px !important;
     color: #454545 !important;
 }
+
 table.table td {
     color: #3e3e3e;
 }
@@ -380,9 +404,10 @@ tr.first {
     margin-bottom: 20px;
 }
 
-.grey_out {
-    color: #a2a2a2;
-}
+
+/* ---------------------------------------------- /*
+ * Favorites
+/* ---------------------------------------------- */
 
 #favorites h1 {
       font-weight: normal;
@@ -394,12 +419,4 @@ tr.first {
 .btn_favorite.starred .star {
     fill: #FFCC00;
     transition: all 0.5s ease;
-}
-
-@media (max-width: 767px) {
-    .input.col-md-10,
-    .input.col-md-2 {
-        clear: both;
-        width: 100%;
-    }
 }

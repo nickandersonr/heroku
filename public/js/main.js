@@ -50,7 +50,6 @@ function search_works(json_parse) {
     
   /*-- and then favorites --*/
   for (var i = 0, details_results = document.getElementsByClassName('btn_favorite'); i < details_results.length; i++) {
-      alert('hey!');
     details_results[i].addEventListener('click', btn_favorite, false);
   }
     

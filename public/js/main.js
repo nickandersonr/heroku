@@ -55,11 +55,18 @@ function search_works(json_parse) {
     
     
   /*-- Just for fun, an animation for the favorite buttons --*/
-  document.getElementsByClassName("btn_favorite")[0].addEventListener('click', favorite_animate, false);
+
+  // get all of the buttons we want to add the animation to
+  elements = document.getElementsByClassName("btn_favorite")
+
+  // loop through each button and add an event listener
+  for(i=0;i<elements.length;i++) {
+   elements[i].addEventListener('click', favorite_animate, false);
+  }
     
   /*-- Favorite Animation --*/
   function favorite_animate() {
-     this.className = "btn_favorite starred";
+    this.className = "btn_favorite starred";
   }
     
 }

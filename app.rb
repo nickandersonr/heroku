@@ -22,32 +22,24 @@ end
 post '/favorites' do
   content_type :json
   params = JSON.parse(request.body.read)
-    
   data =
     begin
-     JSON.parse(File.read('data.json'))
-        rescue CheckLogFileForSpecificError = > e
-            puts "ERROR: #{e}"
+      JSON.parse(File.read('data.json'))
     end
-  data << { name: params['name'], oid: params['oid'] }
-  File.write('data.json', JSON.pretty_generate(data))
   data.to_json
 end
 
 
+
 =begin
-
 ### Your code, with annotations ###
-
 get '/'
   File.read('index.html') <--- incorrect syntax
 end
-
 get 'favorites' do <--- missing a slash before 'favorites'
   response.header['Content-Type'] = 'application/json' <--- incorrect syntax
   File.read('data.json')
 end
-
 get '/favorites' do  <--- incorrect syntax
   file = JSON.parse(File.read('data.json'))
   unless params[:name] && params[:oid]
@@ -57,5 +49,4 @@ get '/favorites' do  <--- incorrect syntax
   File.write('data.json',JSON.pretty_generate(file))
   movie.to_json
 end
-
 =end

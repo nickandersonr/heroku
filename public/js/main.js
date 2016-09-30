@@ -27,7 +27,7 @@ function search_works(json_parse) {
   
   /*-- If there were no results, let the user know --*/
   if (json_parse.Search === undefined) {
-    results_parse.innerHTML = '<td colspan="4" class="no_results">There are no movies with names like that! <h1>¯\\_(ツ)_/¯</h1></td>'
+    results_parse.innerHTML = '<td colspan="4" class="no_results">There are no movies with a name like that! <h1>¯\\_(ツ)_/¯</h1></td>'
     return ;
   } else {
     results_parse.innerHTML = ''

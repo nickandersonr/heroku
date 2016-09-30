@@ -369,7 +369,9 @@ table.table td {
 tr.first {
     font-weight: 900;
 }
-
+.favorite_column {
+    width: 30px;
+}
 .no_results {
     text-align: center;
 }
@@ -378,13 +380,16 @@ tr.first {
     margin-bottom: 20px;
 }
 
+.grey_out {
+    color: #a2a2a2;
+}
 
 #favorites h1 {
       font-weight: normal;
 }
 
 .btn_favorite .star {
-    fill: #FFF;
+    fill: #858585;
 }
 .btn_favorite.starred .star {
     fill: #FFCC00;

@@ -4,6 +4,7 @@
         %meta{ name: "viewport", content: "width=device-width"}
         %link{ rel: "stylesheet", href: "css/bootstrap.css" }
         %link{ rel: "stylesheet", href: "css/main.css" }
+        %title Movie Search by Nick Anderson
    
     %body.jumbotron.text-center
         %div.container
@@ -25,30 +26,34 @@
                     %div.input_holder.row.form-group
                         %div.input.input--minoru.col-md-8.col-xs-12
                             %input.form-control.input__field.input__field--yoko#search_value{type: "text", placeholder: "Search a Title" }
-                            %label.input__label.input__label--yoko{for: "input-16"}    
+                            %label.input__label.input__label--yoko   
                                 %span.input__label-content.input__label-content--yoko Title 
                                 
                     
 
                         %div.input.input--minoru.submit_container.col-md-4.col-xs-12
                             %input.btn.input__field#search{type: "button", value: "search!" }
-                            %label.input__label{for: "input-22"}
+                            %label.input__label
                                 %span.input__label-content.input__label-content--yoko &nbsp;
                                 
 
                 %div.container#results
-                    %section.content#results_container.col-md-8
+                    %div.content#results_container.col-md-8
                         %h2 Results
                         %table.table.table-striped
                             %thead
                                 %tr.first 
-                                    %th Favorite
+                                    %th.favorite_column 
                                     %th Title
                                     %th Year
                             %tbody
                                 %tr
+                                    %td 
+                                    %td 
+                                        %span.grey_out (Search above to see results here)
+                                    %td
                                     
-                    %section.content.col-md-4
+                    %div.content.col-md-4
                             
                         %aside.panel.hidden
                             %h2 Details
